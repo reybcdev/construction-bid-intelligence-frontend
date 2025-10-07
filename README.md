@@ -25,6 +25,10 @@ Modern React TypeScript frontend for AI-powered construction bid analysis dashbo
 ```bash
 # Install dependencies
 npm install
+
+# Create .env.local file from template
+cp .env.example .env.local
+# Edit .env.local with your configuration
 ```
 
 ## 🏃 Running the Development Server
@@ -35,6 +39,22 @@ npm run dev
 ```
 
 Application will be available at: http://localhost:5173
+
+## ⚙️ Configuration
+
+The application uses environment variables for configuration. Copy `.env.example` to `.env.local` and adjust values:
+
+```env
+# Backend API URL
+VITE_API_URL=http://localhost:8000
+
+# Environment
+VITE_ENVIRONMENT=development
+```
+
+**Important:** All environment variables must be prefixed with `VITE_` to be exposed to the client.
+
+See `.env.example` for all available options.
 
 ## 🏗️ Building for Production
 
